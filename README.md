@@ -1,2 +1,2 @@
-# FashionImageSimilarity
+# FashionImageEmbeddings
 Fashion Image Similarity
