@@ -1,0 +1,15 @@
+torch==1.13.1
+torchaudio==0.13.1
+streamlit==1.26.0
+Pillow==9.0.1
+transformers==4.29.2
+urllib3==1.26.16
+tqdm==4.65.0
+pyaml==21.10.1
+PyYAML==6.0.1
+ruamel.yaml==0.17.17
+more-itertools
+img2vec_pytorch
+torchvision==0.14.2
+transformers==4.29.2
+sci-kit-learn==0.24.2

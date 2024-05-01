@@ -5,7 +5,7 @@ import pickle
 import random
 import urllib.request
 from itertools import cycle
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Tuple,Union
 
 import numpy as np
 import requests

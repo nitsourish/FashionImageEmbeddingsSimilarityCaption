@@ -26,7 +26,7 @@ tokenizer = AutoTokenizer.from_pretrained(
 )
 
 max_length = 32
-num_beams = 4
+num_beams = 5
 gen_kwargs = {"max_length": max_length, "num_beams": num_beams}
 
 
