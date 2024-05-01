@@ -12,4 +12,4 @@ PyYAML==6.0.1
 ruamel.yaml==0.17.17
 more-itertools
 img2vec_pytorch
-sci-kit-learn
+sci-kit-learn==1.4.2
