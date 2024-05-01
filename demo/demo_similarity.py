@@ -12,7 +12,7 @@ import pandas as pd
 import requests
 import streamlit as st
 import torch
-from img2vec_pytorch import Img2Vec
+# from image_to_vec import Img2Vec
 from PIL import Image
 from sklearn.metrics.pairwise import cosine_similarity
 from tqdm import tqdm
@@ -41,6 +41,8 @@ else:
 
 gen_kwargs = {"model": model_name}
 
+with open("demo/image_to_vec.py") as file:
+    exec(file.read())
 
 def precomputed_embedding_load() -> dict:
     """This function loads the embeddings from a pickle file"""
@@ -82,6 +84,7 @@ def image_uploader():
             type=["png", "jpg", "jpeg"],
         )
         images = [image.name for image in images]
+        images = ['./images/sample_images/' + image for image in images] 
         submitted = st.form_submit_button("Submit")
         if submitted:
             df = find_similar_images_multiple(
@@ -132,7 +135,7 @@ def image_similarity_calculation(
 ) -> Tuple[List[str], List[float], Any]:
     """This function calculates the similarity between the source image and the images in the dataset"""
 
-    img2vec = Img2Vec(**gen_kwargs)
+    img2vec = Img2Embebedding(**gen_kwargs)
     vec = img2vec.get_vec(img, tensor=False)
     similarity_dict = {}
     for key, value in tqdm(image_vec_dict.items()):

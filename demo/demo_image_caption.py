@@ -52,6 +52,8 @@ def image_uploader():
             accept_multiple_files=True,
             type=["png", "jpg", "jpeg"],
         )
+        st.write(images)
+        images = [image.name for image in images]
         submitted = st.form_submit_button("Submit")
         if submitted:
             predicted_captions = predict_step(images, False)

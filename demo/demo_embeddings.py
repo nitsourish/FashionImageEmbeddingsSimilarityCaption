@@ -6,7 +6,6 @@ import random
 import urllib.request
 from itertools import cycle
 from typing import Any, Dict, List, Tuple,Union
-
 import numpy as np
 import requests
 import streamlit as st
@@ -27,6 +26,9 @@ if model_name == "resnet":
         "Which pretrained resnet model do you want to use?",
         ("resnet18", "resnet34", "resnet50", "resnet152"),
     )
+
+with open("demo/image_to_vec.py") as file:
+    exec(file.read())
 
 if model_name == "efficientnet":
     sideBar = st.sidebar
@@ -70,11 +72,13 @@ def image_uploader():
 
     with st.form("uploader"):
         images = st.file_uploader(
-            "Embeddings Generation",
+            "Upload Images",
             accept_multiple_files=True,
             type=["png", "jpg", "jpeg"],
         )
         images = [image.name for image in images]
+        images = ['./images/sample_images/' + image for image in images] 
+        st.write(images)
         submitted = st.form_submit_button("Submit")
         if submitted:
             predicted_embeddings = predict_batch(images, False)
@@ -130,7 +134,7 @@ def predict_batch(images_list: List, is_url: bool) -> dict:
     """This function takes the list of images and returns the embeddings of the images"""
 
     images = []
-    for image in tqdm(images_list):
+    for image in images_list:
         if is_url:
             urllib.request.urlretrieve(image, "file.jpg")
             i_image = Image.open("file.jpg")
@@ -164,7 +168,7 @@ def predict_oneshot(image: Any, is_url: bool) -> np.ndarray:
     if i_image.mode != "RGB":
         i_image = i_image.convert(mode="RGB")
 
-    img2vec = Img2Vec(**gen_kwargs)
+    img2vec = Img2Embebedding(**gen_kwargs)
     vec = img2vec.get_vec(i_image, tensor=False)
     if is_url:
         os.remove("file.jpg")
