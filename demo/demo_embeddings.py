@@ -54,7 +54,7 @@ def embedding_write(predicted_embeddings: dict):
 def show_sample_images():
     """This function displays the sample images and their embeddings"""
 
-    filteredImages = {"First": "1559.jpg", "Second": "palace.jpg"}
+    filteredImages = {"First": "test_image1.jpg", "Second": "test_image2.jpg"}
 
     cols = cycle(st.columns(3))
     for filteredImage in filteredImages.values():

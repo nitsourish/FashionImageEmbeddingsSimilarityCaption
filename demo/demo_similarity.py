@@ -55,12 +55,12 @@ def precomputed_embedding_load() -> dict:
 def show_sample_images():
     """This function displays the sample images and its similar images"""
 
-    filteredImages = {"First": "1559.jpg"}
+    filteredImages = {"First": "test_image2.jpg"}
     image_vec_dict = precomputed_embedding_load()
     cols = cycle(st.columns(3))
     for filteredImage in filteredImages.values():
         next(cols).image(filteredImage, width=200)
-    filteredImage = filteredImages.values()
+
     for i, filteredImage in enumerate(filteredImages.values()):
         if next(cols).button("Similar Fashion Generation"):
             similar_images, similarity_score, img, df = find_similar_images(
