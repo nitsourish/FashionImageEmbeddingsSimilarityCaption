@@ -1,7 +1,24 @@
-torch
-streamlit==1.26.0
+# torch
+# streamlit==1.26.0
+# torchvision
+# pytorch-lightning
+# Pillow==9.0.1
+# transformers==4.29.2
+# urllib3==1.26.16
+# tqdm==4.65.0
+# pyaml==21.10.1
+# PyYAML==6.0.1
+# ruamel.yaml==0.17.17
+# more-itertools
+# img2vec_pytorch
+# scikit-learn==1.4.2
+
+torch==1.13.1
+torchaudio==0.13.1
+torchmetrics==1.1.2
 torchvision
-pytorch-lightning
+pytorch-lightning==2.0.9
+streamlit==1.26.0
 Pillow==9.0.1
 transformers==4.29.2
 urllib3==1.26.16
@@ -10,5 +27,5 @@ pyaml==21.10.1
 PyYAML==6.0.1
 ruamel.yaml==0.17.17
 more-itertools
-img2vec_pytorch
 scikit-learn==1.4.2
+img2vec_pytorch
