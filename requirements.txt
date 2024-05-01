@@ -14,7 +14,6 @@
 # scikit-learn==1.4.2
 
 torch==1.13.1
-torchaudio==0.13.1
 torchmetrics==1.1.2
 torchvision
 pytorch-lightning==2.0.9
