@@ -107,6 +107,13 @@ To run the Streamlit application, follow these steps:
     streamlit run demo_image_caption.py
     ```
 
+7. Live Streamlit cloud Apps can be fired from here
+   ```
+   https://fashionimageembeddingssimilaritycaption-q7wwrxgt84itn8zhkwsxap.streamlit.app/
+   https://fashionimageembeddingssimilaritycaption-njhpbpgnf7brd8f8o54r6t.streamlit.app/
+   https://fashionimageembeddingssimilaritycaption-pjgl4ixyaqnqwdv8ahzjm6.streamlit.app/
+   ```
+
 Now you can explore the Streamlit application and use the provided scripts to extract embeddings, find similar images, and generate captions for fashion images.
 
 
