@@ -112,8 +112,8 @@ def images_url():
 def main():
     """This is the main function that runs the streamlit app"""
 
-    st.title("Image Embeddings Generation")
-    st.header("Welcome to Image Embeddings Generation!")
+    st.title("Similar Fashion Generation")
+    st.header("Welcome to Similar Fashion Generation!")
     st.write(
         "This is a sample app that demonstrates Similar Fashion Generation for fashion Images.🚀"
     )
