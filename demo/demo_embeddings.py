@@ -10,7 +10,6 @@ import numpy as np
 import requests
 import streamlit as st
 import torch
-from img2vec_pytorch import Img2Vec
 from PIL import Image
 from tqdm import tqdm
 
@@ -56,7 +55,7 @@ def embedding_write(predicted_embeddings: dict):
 def show_sample_images():
     """This function displays the sample images and their embeddings"""
 
-    filteredImages = {"First": "test_image1.jpg", "Second": "test_image2.jpg"}
+    filteredImages = {"First": "test_image4.jpg", "Second": "test_image2.jpg"}
 
     cols = cycle(st.columns(3))
     for filteredImage in filteredImages.values():
@@ -147,7 +146,7 @@ def predict_batch(images_list: List, is_url: bool) -> dict:
 
         images.append(i_image)
 
-    img2vec = Img2Vec(**gen_kwargs)
+    img2vec = Img2Embebedding(**gen_kwargs)
     vec = img2vec.get_vec(images, tensor=False)
     image_vec_dict = dict(zip(images_list, vec))
     if is_url:

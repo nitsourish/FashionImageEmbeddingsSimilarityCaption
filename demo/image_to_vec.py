@@ -33,7 +33,7 @@ class Img2Embebedding():
     Inception_OUTPUT_SIZES = {'inception_v4':1536, 'inception_v3':2048, 'inception_resnet_v2':1536}
 
     def __init__(self, cuda=False, model='resnet-18', layer='default', layer_output_size=512, gpu=0):
-        """ Img2Vec
+        """ Img2Embebedding
         :param cuda: If set to True, will run forward pass on GPU
         :param model: String name of requested model
         :param layer: String or Int depending on model.

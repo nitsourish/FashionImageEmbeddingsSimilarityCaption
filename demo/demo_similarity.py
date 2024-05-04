@@ -6,7 +6,6 @@ import random
 import urllib.request
 from itertools import cycle
 from typing import Any, Dict, List, Tuple, Union
-
 import numpy as np
 import pandas as pd
 import requests
@@ -57,7 +56,7 @@ def precomputed_embedding_load() -> dict:
 def show_sample_images():
     """This function displays the sample images and its similar images"""
 
-    filteredImages = {"First": "test_image2.jpg"}
+    filteredImages = {"First": "test_image5.jpg"}
     image_vec_dict = precomputed_embedding_load()
     cols = cycle(st.columns(3))
     for filteredImage in filteredImages.values():
